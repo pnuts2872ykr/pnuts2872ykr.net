@@ -1,0 +1,82 @@
+body {
+    background: #f9f6f1;
+  }
+  
+  div {
+    padding: 4em 0;
+    text-align: center;
+    z-index: 0;
+    position: relative;
+  }
+  div:nth-child(1) {
+    background: #7cd4d4 url(http://www.graphicartsunit.com/images/noise.png);
+  }
+  div:nth-child(2) {
+    background: #e2df45 url(http://www.graphicartsunit.com/images/noise.png);
+  }
+  div:nth-child(3) {
+    background: #e8afbb url(http://www.graphicartsunit.com/images/noise.png);
+  }
+  div:nth-child(4) {
+    background: #8bc3e5 url(http://www.graphicartsunit.com/images/noise.png);
+  }
+  
+  .btn {
+    font-family: lato, sans-serif;
+    font-weight: bold;
+    font-size: 1em;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    color: #03384b;
+    display: inline-block;
+    padding: 20px 40px 20px 40px;
+    position: relative;
+    border: 3px solid #03384b;
+  }
+  .btn:before {
+    border: 3px solid #f9f6f1;
+    background: url(http://www.graphicartsunit.com/images/noise2.png);
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  
+  .button-1 {
+    border-radius: 100em;
+  }
+  .button-1:before {
+    border-radius: 100em;
+    left: 2px;
+    top: 1px;
+  }
+  
+  .button-2 {
+    border-radius: 5px;
+  }
+  .button-2:before {
+    border-radius: 5px;
+    left: 2px;
+    top: 1px;
+  }
+  
+  .button-3 {
+    font-size: 1.5em;
+    border: none;
+    text-shadow: 2px 2px 0 #f9f6f1;
+  }
+  .button-3:before {
+    content: none;
+  }
+  
+  .button-4 {
+    border-radius: 100em;
+    text-shadow: 2px 2px 0 #f9f6f1;
+  }
+  .button-4:before {
+    border-radius: 100em;
+    background: transparent;
+    left: -1px;
+    top: -1px;
+  }
