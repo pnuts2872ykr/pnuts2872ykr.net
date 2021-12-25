@@ -5,46 +5,46 @@
     --clr4: tomato;
     --border-radius: 7px;
     --text-radius: 50em;
-  }
-  
-  body {
+}
+
+body {
     background: var(--clr1);
     padding: 50px 0 0 0;
     margin: 0 10px;
-  }
-  body *, body :after, body :before {
+}
+body *, body :after, body :before {
     box-sizing: border-box;
-  }
-  
-  .transparent {
+}
+
+.transparent {
     background: transparent !important;
-  }
-  
-  .wrap {
+}
+
+.wrap {
     max-width: 960px;
     min-width: 360px;
     margin: 0 auto;
     position: relative;
-  }
-  .wrap.sticky {
+}
+.wrap.sticky {
     margin-top: 150px;
     /* set height from header */
-  }
-  
-  .fluid .wrap {
+}
+
+.fluid .wrap {
     max-width: 100% !important;
-  }
-  
-  header {
+}
+
+header {
     background: var(--clr2);
     padding: 50px;
     width: 100%;
     border-radius: var(--border-radius);
     position: relative;
     z-index: 99;
-  }
-  
-  .wrap.sticky header {
+}
+
+.wrap.sticky header {
     background: var(--clr2);
     padding: 50px;
     position: fixed;
@@ -53,41 +53,41 @@
     width: calc(100% - 20px);
     min-width: 360px;
     border-radius: 0px 0px var(--border-radius) var(--border-radius);
-  }
-  
-  .fluid .wrap.sticky header {
+}
+
+.fluid .wrap.sticky header {
     max-width: 100% !important;
-  }
-  
-  header .logo {
+}
+
+header .logo {
     background-image: url("img/icon-pnuts.jpg");
     width: 100px;
     height: 100px;
     border-radius: var(--text-radius);
-  }
-  header nav {
+}
+header nav {
     position: absolute;
     right: 0;
     top: 50%;
     transform: translate(-50px, -50%);
-  }
-  header nav ul li {
+}
+header nav ul li {
     display: inline-block;
     list-style: none;
     width: 60px;
     height: 10px;
     border-radius: var(--text-radius);
-  }
-  
-  section {
+}
+
+section {
     background: var(--clr2);
     padding: 100px 50px;
     width: 100%;
     border-radius: var(--border-radius);
     position: relative;
     margin: 10px 0 0 0;
-  }
-  section .headline {
+}
+section .headline {
     display: block;
     margin: 0 auto;
     list-style: none;
@@ -96,8 +96,13 @@
     background: var(--clr1);
     border-radius: var(--text-radius);
     text-align: center;
-  }
-  section .text {
+}
+section .headline>p{
+    margin: 0;
+    vertical-align: middle;
+    display: inline-block;
+}
+section .text {
     display: block;
     margin: 10px auto;
     max-width: 500px;
@@ -105,147 +110,147 @@
     background: var(--clr1);
     border-radius: var(--text-radius);
     text-align: center;
-  }
-  section .button {
+}
+section .button {
     display: block;
     margin: 20px auto 0 auto;
     max-width: 120px;
     height: 35px;
     background: var(--clr1);
     border-radius: var(--text-radius);
-  }
-  section.contentbox .headline {
+}
+section.contentbox .headline {
     margin: 10px 0 !important;
     max-width: 65%;
   }
-  section.contentbox .text {
+section.contentbox .text {
     margin: 10px 0 !important;
     max-width: 100%;
-  }
-  section.contentbox .button {
+}
+section.contentbox .button {
     margin: 10px 0 !important;
-  }
-  section.cards {
+}
+section.cards {
+    display: flex;
     padding: 0px;
     background: transparent;
-    display: table;
-  }
-  section.cards .card {
+}
+section.cards .card {
+    width: 100%;
     background: var(--clr2);
-    width: calc(33.6% - 10px);
     margin: 0 5px;
     border-radius: var(--border-radius);
     display: inline-block;
-  }
-  section.cards .card:first-child {
+}
+section.cards .card:first-child {
     margin: 0 5px 0 0;
-  }
-  section.cards .card:last-child {
+}
+section.cards .card:last-child {
     margin: 0 0 0 5px;
-  }
-  section.cards .card .content {
+}
+section.cards .card .content {
     padding: 40px;
-  }
-  section.cards .card img {
+}
+section.cards .card img {
     width: 100%;
     height: auto;
     border-radius: var(--border-radius) var(--border-radius) 0px 0px;
-  }
-  
-  footer {
+}
+
+footer {
     padding: 50px;
     width: 100%;
     border-radius: var(--border-radius) var(--border-radius) 0px 0px;
     position: relative;
     margin: 10px 0 0 0;
-  }
+}
   footer .logo {
     background-image: url(img/icon-pnuts-50-50.jpg);
     width: 50px;
     height: 50px;
     border-radius: var(--text-radius);
-  }
-  footer nav {
+}
+footer nav {
     position: absolute;
     right: 0;
     top: 50%;
     transform: translate(-50px, -50%);
-  }
-  footer nav ul li {
+}
+footer nav ul li {
     display: inline-block;
     list-style: none;
     width: 60px;
     height: 10px;
     border-radius: var(--text-radius);
-  }
-  
-  @media (max-width: 728px) {
+}
+
+@media (max-width: 728px) {
     section.cards .card {
-      width: 100%;
-      display: block;
-      margin: 10px 0 0 0 !important;
-      padding: 0;
+        width: 100%;
+        display: block;
+        margin: 10px 0 0 0 !important;
+        padding: 0;
     }
-  
+
     .wrapper {
-      padding: 50px 10px 100px 10px !important;
+        padding: 50px 10px 100px 10px !important;
     }
-  }
-  body, html {
+}
+body, html {
     max-width: 100%;
     overflow-x: hidden;
-  }
-  
-  body {
+}
+
+body {
     background: var(--clr4);
     text-rendering: optimizelegibility;
     margin: 0px;
     padding: 0px;
     height: 100%;
-  }
-  
-  .wrapper {
+}
+
+.wrapper {
     transform-origin: center bottom 0px;
     transition: all 0.5s ease 0s;
     box-shadow: 0px 22px 54px rgba(0, 0, 0, 0.5);
     background: var(--clr3);
     padding: 50px 50px 100px 50px;
-  }
-  
-  body.tight .wrapper {
+}
+
+body.tight .wrapper {
     transform: translateY(-60px) scale(0.9);
     cursor: pointer;
-  }
-  
-  .footer {
+}
+
+.footer {
     width: 90%;
     max-width: 1440px;
     margin: 0px auto;
     text-align: center;
     margin-bottom: 50px;
-  }
-  
-  @keyframes bounce {
+}
+
+@keyframes bounce {
     0%, 20%, 50%, 80%, 100% {
-      -moz-transform: translateY(0);
-      -ms-transform: translateY(0);
-      -webkit-transform: translateY(0);
-      transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
     }
     40% {
-      -moz-transform: translateY(-30px);
-      -ms-transform: translateY(-30px);
-      -webkit-transform: translateY(-30px);
-      transform: translateY(-30px);
+        -moz-transform: translateY(-30px);
+        -ms-transform: translateY(-30px);
+        -webkit-transform: translateY(-30px);
+        transform: translateY(-30px);
     }
     60% {
-      -moz-transform: translateY(-15px);
-      -ms-transform: translateY(-15px);
-      -webkit-transform: translateY(-15px);
-      transform: translateY(-15px);
+        -moz-transform: translateY(-15px);
+        -ms-transform: translateY(-15px);
+        -webkit-transform: translateY(-15px);
+        transform: translateY(-15px);
     }
   }
-  .arrow {
+.arrow {
     position: fixed;
     bottom: 50px;
     left: 50%;
@@ -261,17 +266,15 @@
     background-size: 20px 15px;
     background-repeat: no-repeat;
     background-position: center;
-  }
-  
-  .bounce {
+}
+
+.bounce {
     -moz-animation: bounce 2s infinite;
     -webkit-animation: bounce 2s infinite;
     animation: bounce 2s infinite;
-  }
-  .copyright{
+}
+.copyright{
     margin-top: 20px;
     text-align: center;
     color:rgba(22, 21, 21, 0.5)
-  }
-
-  
+}
