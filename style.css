@@ -26,6 +26,7 @@ body {
   padding: 50px 0 0 0;
   margin: 0 10px;
   font-family: 'Noto Sans JP', Arial, sans-serif;
+  font-feature-settings: 'palt';
 }
 body *,
 body :after,
@@ -39,7 +40,6 @@ body :before {
 
 .wrap {
   max-width: 960px;
-  min-width: 360px;
   margin: 0 auto;
   position: relative;
 }
@@ -53,6 +53,8 @@ body :before {
 }
 
 header {
+  display: flex;
+  justify-content: space-between;
   background: var(--clr2);
   padding: 50px;
   width: 100%;
@@ -76,23 +78,23 @@ header {
   max-width: 100% !important;
 }
 
-header .logo {
-  background-image: url('img/icon-pnuts.jpg');
+header .logo img {
   width: 100px;
   height: 100px;
   border-radius: var(--text-radius);
 }
 header nav {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translate(-50px, -50%);
+  display: flex;
+}
+header nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
 }
 header nav ul li {
-  display: inline-block;
   list-style: none;
-  width: 60px;
-  height: 10px;
+  height: auto;
   border-radius: var(--text-radius);
 }
 nav ul li a {
@@ -104,7 +106,7 @@ nav ul li a:hover {
 
 section {
   background: var(--clr2);
-  padding: 100px 50px;
+  padding: 100px 20px;
   width: 100%;
   border-radius: var(--border-radius);
   position: relative;
@@ -132,8 +134,16 @@ section .text {
   text-align: center;
   padding-top: 0.4rem;
   padding-bottom: 0.6rem;
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+section .text p {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 section .button {
+  text-align: center;
+  padding-top: 0.25rem;
   display: block;
   margin: 20px auto 0 auto;
   max-width: 120px;
@@ -149,26 +159,24 @@ section.contentbox .text {
   margin: 10px 0 !important;
   max-width: 100%;
 }
+section.contentbox .text p {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
 section.contentbox .button {
   margin: 10px 0 !important;
 }
 section.cards {
   padding: 0px;
   background: transparent;
-  display: table;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.5rem;
 }
 section.cards .card {
   background: var(--clr2);
-  width: calc(33.6% - 10px);
-  margin: 0 5px;
   border-radius: var(--border-radius);
   display: inline-block;
-}
-section.cards .card:first-child {
-  margin: 0 5px 0 0;
-}
-section.cards .card:last-child {
-  margin: 0 0 0 5px;
 }
 section.cards .card .content {
   padding: 40px;
@@ -193,16 +201,21 @@ footer .logo {
   border-radius: var(--text-radius);
 }
 footer nav {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translate(-50px, -50%);
+  display: flex;
+  align-items: center;
+}
+footer nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 footer nav ul li {
   display: inline-block;
   list-style: none;
   width: 60px;
-  height: 10px;
+  height: auto;
   border-radius: var(--text-radius);
 }
 
@@ -251,6 +264,11 @@ body.tight .wrapper {
   margin: 0px auto;
   text-align: center;
   margin-bottom: 50px;
+}
+.footer .footer-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 @keyframes bounce {
@@ -304,4 +322,29 @@ body.tight .wrapper {
   margin-top: 20px;
   text-align: center;
   color: rgba(22, 21, 21, 0.5);
+}
+
+@media (max-width: 750px) {
+  header,
+  .footer {
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+    align-items: center;
+  }
+  header nav {
+    justify-content: center;
+  }
+  header nav ul {
+    padding: 0;
+  }
+  section.cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 550px) {
+  section.cards {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
 }
