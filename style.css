@@ -60,7 +60,7 @@
   }
   
   header .logo {
-    background-image: url("https://github.com/pnuts2872ykr/pnuts2872ykr.net/blob/master/img/icon-pnuts.jpg");
+    background-image: url("img/icon-pnuts.jpg");
     width: 100px;
     height: 100px;
     border-radius: var(--text-radius);
@@ -76,7 +76,6 @@
     list-style: none;
     width: 60px;
     height: 10px;
-    background: var(--clr1);
     border-radius: var(--text-radius);
   }
   
@@ -96,14 +95,16 @@
     height: 30px;
     background: var(--clr1);
     border-radius: var(--text-radius);
+    text-align: center;
   }
   section .text {
     display: block;
     margin: 10px auto;
     max-width: 500px;
-    height: 14px;
+    height: 22px;
     background: var(--clr1);
     border-radius: var(--text-radius);
+    text-align: center;
   }
   section .button {
     display: block;
@@ -159,7 +160,7 @@
     margin: 10px 0 0 0;
   }
   footer .logo {
-    background: var(--clr2);
+    background-image: url(img/icon-pnuts-50-50.jpg);
     width: 50px;
     height: 50px;
     border-radius: var(--text-radius);
@@ -267,4 +268,9 @@
     -moz-animation: bounce 2s infinite;
     -webkit-animation: bounce 2s infinite;
     animation: bounce 2s infinite;
+  }
+  .copyright{
+    margin-top: 20px;
+    text-align: center;
+    color:rgba(22, 21, 21, 0.5)
   }
