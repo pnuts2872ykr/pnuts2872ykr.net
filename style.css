@@ -23,6 +23,7 @@ body {
   padding: 50px 0 0 0;
   margin: 0 10px;
   font-family: 'Noto Sans JP', Arial, sans-serif;
+  font-feature-settings: 'palt';
 }
 body *,
 body :after,
@@ -138,6 +139,8 @@ section .text p {
   padding-right: 1rem;
 }
 section .button {
+  text-align: center;
+  padding-top: 0.25rem;
   display: block;
   margin: 20px auto 0 auto;
   max-width: 120px;
@@ -152,6 +155,10 @@ section.contentbox .headline {
 section.contentbox .text {
   margin: 10px 0 !important;
   max-width: 100%;
+}
+section.contentbox .text p {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 section.contentbox .button {
   margin: 10px 0 !important;
