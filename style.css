@@ -355,6 +355,12 @@ Skill
   display:flex;
 flex-direction:row;
 }
+@media (max-width: 550px){
+  .skill{
+    flex-direction: column;
+    align-items: center;
+  }
+}
 /*-------------------
 Skill - html
 ---------------------*/
