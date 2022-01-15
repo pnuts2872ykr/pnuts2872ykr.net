@@ -353,7 +353,7 @@ Skill
 ---------------------*/
 .skill{
   display:flex;
-flex-direction:row;
+  flex-direction:row;
 }
 @media (max-width: 550px){
   .skill{
