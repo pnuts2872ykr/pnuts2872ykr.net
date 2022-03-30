@@ -463,3 +463,6 @@ Skill - php
 	background-image: radial-gradient(#f2f2f2 60%, transparent 61%), conic-gradient(#31008d 0% 10%, #d9d9d9 15% 100%);
 	border-radius: 50%;
 }
+.gadget{
+  text-align:left;
+}
