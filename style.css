@@ -354,6 +354,7 @@ Skill
 .skill{
   display:flex;
   flex-direction:row;
+  flex-wrap: wrap;
 }
 @media (max-width: 550px){
   .skill{
